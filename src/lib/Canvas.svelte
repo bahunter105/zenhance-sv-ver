@@ -7,9 +7,13 @@
   import createTeamSVG from '$lib/images/Create Team.svg'
   import {addNewTeamGroup, getAngleXYCordinates, getTeamAngleXYCordinates, addNewPerson} from '$lib/functions/newTeamGroupCsv.js'
   import {orgUsersStore} from '$lib/functions/orgUsersStore.js';
-  import org_csv from '$lib/Org.csv'
-  import person_csv from '$lib/PersonRole.csv'
+  // import orgCsv from '$lib/Org.csv'
+  // import personCsv from '$lib/PersonRole.csv'
 	import { blank_object, children } from 'svelte/internal';
+
+
+  export let orgCsv
+  export let personCsv
 
   let data = []
 
@@ -17,7 +21,7 @@
   let regex = /\Level/;;
   let level_counter = 0;
 
-  Object.keys(org_csv[0]).forEach(key => {
+  Object.keys(orgCsv[0]).forEach(key => {
     if (key.match(regex)) {
       level_counter++
     }
@@ -26,7 +30,7 @@
   let csv_levels = []
   let line_data
 
-  org_csv.forEach(line => {
+  orgCsv.forEach(line => {
     line_data = line
     let name_found = false
     for(let i = 1; i <= level_counter; i++){
@@ -57,7 +61,7 @@
 
   });
 
-  person_csv.forEach(person => {
+  personCsv.forEach(person => {
     let team = data.find( team => team['Name'] == person['Team'])
     team['roles'][person['Role']] = person['Person']
   });

@@ -109,7 +109,8 @@ function addNewTeamGroup(layer, coordinates, data = {'name': 'Name'}) {
         height: 180 * scale,
         offsetX: 90 * scale,
         offsetY: 90 * scale,
-        id: "teamGroup"
+        id: "teamGroup",
+        perfectDrawEnabled: false
       });
 
       // add the shape to the layer
@@ -179,6 +180,7 @@ function addNewTeamGroup(layer, coordinates, data = {'name': 'Name'}) {
         offsetX: 28 * scale,
         offsetY: 28 * scale,
         // draggable: true,
+        perfectDrawEnabled: false
       });
 
       // add the shape to the layer
@@ -223,6 +225,7 @@ function addNewTeamGroup(layer, coordinates, data = {'name': 'Name'}) {
         offsetX: 20 * scale,
         offsetY: 20 * scale,
         // draggable: true,
+        perfectDrawEnabled: false
       });
 
       // add the shape to the layer
@@ -274,6 +277,7 @@ function addNewPerson(group, coordinates, scale, data = {'name': 'Not Assigned',
         offsetY: 30 * scale,
         id: "person",
         draggable: false,
+        perfectDrawEnabled: false
       });
 
       personGroup.add(newPerson)
@@ -286,6 +290,7 @@ function addNewPerson(group, coordinates, scale, data = {'name': 'Not Assigned',
             fontSize: 10 * scale,
             fontStyle: 'bold italic',
             visible: false,
+            perfectDrawEnabled: false
           });
           personGroup.add(textName)
       } else{
@@ -296,6 +301,7 @@ function addNewPerson(group, coordinates, scale, data = {'name': 'Not Assigned',
             fontSize: 10 * scale,
             fontStyle: 'bold italic',
             visible: false,
+            perfectDrawEnabled: false
           });
           personGroup.add(textName)
       }
@@ -307,6 +313,7 @@ function addNewPerson(group, coordinates, scale, data = {'name': 'Not Assigned',
           fontSize: 10 * scale,
           fontStyle: 'italic',
           visible: false,
+          perfectDrawEnabled: false
         });
         personGroup.add(textRole)
 
