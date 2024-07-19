@@ -8,7 +8,7 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		paths: {
-			base: process.env.NODE_ENV === 'production' ? '/zenhance-sv-ver' : ''
+			base: process.env.NODE_ENV === 'production' ? '/zenhance-spa' : ''
 		}
 	}
 };
